@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='TowelStuff',
+    name='UDS Module',
     version='0.1.0',
     author='Wen Zou',
     author_email='wen@independa.com',
