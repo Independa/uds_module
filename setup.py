@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='UDS Module',
-    version='0.1.1',
+    version='0.1.2',
     author='Wen Zou',
     author_email='wen@independa.com',
     packages=['validate'],
