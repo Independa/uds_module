@@ -6,7 +6,6 @@ setup(
     author='Wen Zou',
     author_email='wen@independa.com',
     packages=['validate'],
-    scripts=[''],
     url='',
     license='LICENSE.txt',
     description='This is UDS module for data validation and queue sender',
