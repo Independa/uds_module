@@ -11,6 +11,5 @@ setup(
     license='LICENSE.txt',
     description='This is UDS module for data validation and queue sender',
     long_description=open('README.txt').read(),
-    install_requires=[
-        ],
-    )
+    zip_safe=False,
+)
