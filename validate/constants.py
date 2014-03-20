@@ -98,3 +98,27 @@ READING_TYPE_SLUG_LIST = [BODY_WEIGHT_SLUG, GLUCOSE_SLUG, DIASTOLIC_SLUG,
                           SCALE_SLUG, PANIC_SLUG, PRESSURE_SLUG,
                           TOILET_SLUG, DOOR_SENSOR_SLUG, MOTION_SENSOR_SLUG,
                           BED_SLUG, SLEEP_SLUG, FIRE_SLUG]
+
+ACKNOWLEDGE_KEY = 'acknowledgement'
+SOURCE_TYPE_KEY = 'source_type'
+DEVICE_ID_KEY = 'device_id'
+API_KEY_KEY = "api_key"
+ORIGINAL_VALUE_KEY = 'value'
+READING_TYPE_ID_KEY = 'reading_type_id'
+ORIGINAL_UNIT_KEY = 'unit'
+PREFERRED_VALUE_KEY = 'pref_value'
+PREFERRED_UNIT_KEY = 'pref_unit'
+USER_EVENT_KEY = 'user_event'
+TAG_KEY = 'tag'
+LATITUDE_KEY = 'latitude'
+LONGITUDE_KEY = 'longitude'
+DURATION_KEY = 'duration'
+CREATED_READING_KEY = 'created_reading'
+CREATED_TRANSMISSION_KEY = 'created_transmission'
+DATA_KEY = 'data'
+READINGS_JSON_KEY = 'readings'
+PHONE_SOURCE_KEY = 'phone'
+DEVICE_SOURCE_KEY = 'device'
+CONFIRM_KEY = 'confirm'
+PENDING_KEY = 'pending'
+REMOVE_KEY = 'remove'
