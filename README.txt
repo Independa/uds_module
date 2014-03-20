@@ -1,6 +1,6 @@
 This is the module for the UDS
 
-To Install: pip install git+https://git@bitbucket.org:wenzou/python_module.git
+To Install: pip install git+https://wenzou:Sn5BmjLY@bitbucket.org/wenzou/python_module.git
 
 GitHub Account
 Username: independamodule

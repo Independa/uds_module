@@ -122,3 +122,7 @@ DEVICE_SOURCE_KEY = 'device'
 CONFIRM_KEY = 'confirm'
 PENDING_KEY = 'pending'
 REMOVE_KEY = 'remove'
+
+
+#name of the task
+API_PROCESS_TASK = 'api_process_task'
