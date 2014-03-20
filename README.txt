@@ -1,16 +1,13 @@
 This is the module for the UDS
 
-To Install: pip install git+https://wenzou:Sn5BmjLY@bitbucket.org/wenzou/python_module.git
+To Install:
+
+pip install git+https://independamodule:L0AiGxrQ@github.com/Independa/uds_module.git
 
 GitHub Account
 Username: independamodule
 Email: wen@independa.com
-Password: Dq7&gm9x
-
-Bitbucket Account
-Username: wenzou
-Email: wen@tailwindweb.com
-Password: Sn5BmjLY
+Password: L0AiGxrQ
 
 References:
 https://devcenter.heroku.com/articles/python-pip
