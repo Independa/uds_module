@@ -17,14 +17,25 @@ def validate(value, reading_type, unit=None):
         return return_failure(message='Invalid reading type')
         
     if not unit:
-        unit = DEFAULT_UNITS_BY_READING_TYPE[reading_type]
+        unit = DEFAULT_UNITS_BY_READING_TYPE.get(reading_type, None)
+        if unit is None:
+            #error finding default
+            return return_failure(message='Error finding default')
 
     #check if unit matches the reading_type
-    if unit not in ACCEPTED_UNITS_BY_READING_TYPE[reading_type]:
+    accepted_reading_types = ACCEPTED_UNITS_BY_READING_TYPE.get(reading_type, None)
+    if accepted_reading_types is None:
+        return return_failure(message='Could not get accepted units for reading type')
+    if unit not in accepted_reading_types:
         return return_failure(message='Invalid unit for reading type')
     #check if value within acceptable range of unit
     MIN_INDEX=0
     MAX_INDEX=1
+    
+    
+    range_spec = RANGE_SPEC_BY_UNIT.get(reading_type, None)
+    if range_spec is None:
+        return return_failure(message='Could not get range by reading type')
     
     range_by_reading_type = RANGE_SPEC_BY_UNIT[reading_type].get(unit, None)
     if range_by_reading_type is None:
