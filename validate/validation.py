@@ -28,7 +28,7 @@ def validate(value, reading_type, unit=None):
     
     range_by_reading_type = RANGE_SPEC_BY_UNIT[reading_type].get(unit, None)
     if range_by_reading_type is None:
-        range_value =  RANGE_SPEC_BY_UNIT[reading_type].get(DEFAULT_RANGES)
+        range_value =  RANGE_SPEC_BY_UNIT[DEFAULT_RANGES].get(unit)
     else:
         range_value = RANGE_SPEC_BY_UNIT[reading_type].get(unit)
     
