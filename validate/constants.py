@@ -48,7 +48,7 @@ FIRE_SLUG = "fire"
 ###
 
 RANGE_SPEC_BY_UNIT = {
-    BOOLEAN_UNIT_SLUG: (0, 1),
+    BOOLEAN_UNIT_SLUG: (0, 1, 'True', 'False', '1', '0'),
     WEIGHT_UNIT_KILOGRAMS_SLUG: (27, 180, 'kilograms'),
     WEIGHT_UNIT_POUNDS_SLUG: (60, 399, 'pounds'),
     WEIGHT_UNIT_STONES_SLUG: (4, 30, 'stones'),

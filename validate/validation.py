@@ -22,10 +22,8 @@ def validate(value, reading_type, unit=None):
     if unit not in ACCEPTED_UNITS_BY_READING_TYPE[reading_type]:
         return return_failure(message='Invalid unit for reading type')
     #check if value within acceptable range of unit
-    MIN_INDEX = 0
-    MAX_INDEX = 1
     if unit == BOOLEAN_UNIT_SLUG:
-        if value == RANGE_SPEC_BY_UNIT[BOOLEAN_UNIT_SLUG][MIN_INDEX] or value == RANGE_SPEC_BY_UNIT[BOOLEAN_UNIT_SLUG][MAX_INDEX]:
+        if value in RANGE_SPEC_BY_UNIT[BOOLEAN_UNIT_SLUG]:
             return return_success(message='Successful')
     else:
         #todo: determine if its a float value based on constants
