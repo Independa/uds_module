@@ -4,6 +4,9 @@ To Install:
 
 pip install git+https://independamodule:L0AiGxrQ@github.com/Independa/uds_module.git
 
+To Use in requirements.txt, add:
+-e git+https://independamodule:L0AiGxrQ@github.com/Independa/uds_module.git@release#egg=UDS_Readings_Module
+
 GitHub Account
 Username: independamodule
 Email: wen@independa.com
