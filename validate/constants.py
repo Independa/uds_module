@@ -23,7 +23,6 @@ MG_PER_DL_UNIT_SLUG = 'mgdl'
 MMHG_UNIT_SLUG = 'mmHg'
 TIMES_UNIT_SLUG = 'times'
 
-
 BODY_WEIGHT_SLUG = "body_weight"
 GLUCOSE_SLUG = "glucose"
 DIASTOLIC_SLUG = "diastolic"
@@ -48,8 +47,9 @@ SLEEP_SLUG = "sleep"
 FIRE_SLUG = "fire"
 ###
 
+DEFAULT_RANGES = 'DEFAULT_RANGES'
 RANGE_SPEC_BY_UNIT = {
-    DEFAULT: {
+    DEFAULT_RANGES: {
         BOOLEAN_UNIT_SLUG: (0, 1, 'True', 'False', '1', '0'),
         WEIGHT_UNIT_KILOGRAMS_SLUG: (27, 180, 'kilograms'),
         WEIGHT_UNIT_POUNDS_SLUG: (60, 399, 'pounds'),
