@@ -1,5 +1,6 @@
 __author__ = 'wenzou'
 
+UNLIMITED_POSITIVE = 10000000000000000000000
 
 SYST_CONSTRAINTS = (0,1000)
 DIAST_CONSTRAINTS = (0,1000)
@@ -48,17 +49,85 @@ FIRE_SLUG = "fire"
 ###
 
 RANGE_SPEC_BY_UNIT = {
-    BOOLEAN_UNIT_SLUG: (0, 1, 'True', 'False', '1', '0'),
-    WEIGHT_UNIT_KILOGRAMS_SLUG: (27, 180, 'kilograms'),
-    WEIGHT_UNIT_POUNDS_SLUG: (60, 399, 'pounds'),
-    WEIGHT_UNIT_STONES_SLUG: (4, 30, 'stones'),
-    TEMPERATURE_UNIT_CELSIUS_SLUG: (95, 105, 'farenheit'),
-    TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (35, 40, 'celsius'),
-    OXYGEN_SLUG: (70, 100),
-    SYSTOLIC_SLUG: (60, 250),
-    DIASTOLIC_SLUG: (40, 140),
-    PULSE_SLUG: (30, 150),
-    GLUCOSE_SLUG: (40, 999)
+    DEFAULT: {
+        BOOLEAN_UNIT_SLUG: (0, 1, 'True', 'False', '1', '0'),
+        WEIGHT_UNIT_KILOGRAMS_SLUG: (27, 180, 'kilograms'),
+        WEIGHT_UNIT_POUNDS_SLUG: (60, 399, 'pounds'),
+        WEIGHT_UNIT_STONES_SLUG: (4, 30, 'stones'),
+        TEMPERATURE_UNIT_CELSIUS_SLUG: (95, 105, 'farenheit'),
+        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (35, 40, 'celsius'),
+        PERCENTAGE_UNIT_SLUG: (70, 100),
+        MMHG_UNIT_SLUG: (40, 250),
+        MG_PER_DL_UNIT_SLUG: (40, 999),
+        BPM_UNIT_SLUG: (30, 150),
+        PPM_UNIT_SLUG: (0, 100),
+        STEPS_UNIT_SLUG: (1, UNLIMITED_POSITIVE),
+        ML_CUBED_PER_SECOND_UNIT_SLUG: (0, UNLIMITED_POSITIVE)
+    },
+    SCALE_SLUG : {
+        WEIGHT_UNIT_KILOGRAMS_SLUG: (27, 180, 'kilograms'),
+        WEIGHT_UNIT_POUNDS_SLUG: (60, 399, 'pounds'),
+        WEIGHT_UNIT_STONES_SLUG: (4, 30, 'stones')
+    },
+    BODY_TEMP_SLUG: {
+        TEMPERATURE_UNIT_CELSIUS_SLUG: (95, 105, 'farenheit'),
+        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (35, 40, 'celsius')
+    },
+    ROOM_TEMP_SLUG: {
+        TEMPERATURE_UNIT_CELSIUS_SLUG: (-76, 176, 'farenheit'),
+        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (-60, 80, 'celsius')
+    },
+    GLUCOSE_SLUG: {
+        MG_PER_DL_UNIT_SLUG: (40, 999)
+    },
+    DIASTOLIC_SLUG: {
+        MMHG_UNIT_SLUG: (40, 140)
+    },
+    SYSTOLIC_SLUG: {
+        MMHG_UNIT_SLUG: (60, 250)
+    },
+    OXYGEN_SLUG: {
+        PERCENTAGE_UNIT_SLUG: (70, 100)
+    },
+    AIRFLOW_SLUG: {
+        ML_CUBED_PER_SECOND_UNIT_SLUG: (0, UNLIMITED_POSITIVE)
+    },
+    STEPS_SLUG: {
+        STEPS_UNIT_SLUG: (1, UNLIMITED_POSITIVE)
+    },
+    HEART_RATE_SLUG: {
+        BPM_UNIT_SLUG: (30, 150)
+    },
+    PULSE_SLUG: {
+        BPM_UNIT_SLUG: (30, 150)
+    },
+    CARBON_MONOXIDE_SLUG: {
+        PPM_UNIT_SLUG: (0, 100)
+    },
+    PANIC_SLUG: {
+       
+    },
+    PRESSURE_SLUG: {
+        
+    },
+    TOILET_SLUG: {
+        
+    },
+    DOOR_SENSOR_SLUG: {
+        
+    },
+    MOTION_SENSOR_SLUG: {
+        
+    },
+    BED_SLUG: {
+        
+    },
+    SLEEP_SLUG: {
+        
+    },
+    FIRE_SLUG: {
+        
+    }
 }
 
 WEIGHT_SPEC = {WEIGHT_UNIT_KILOGRAMS_SLUG: RANGE_SPEC_BY_UNIT[WEIGHT_UNIT_KILOGRAMS_SLUG],

@@ -30,7 +30,13 @@ def validate(value, reading_type, unit=None):
             return return_success(message='Successful')
     else:
         #todo: determine if its a float value based on constants
-        if RANGE_SPEC_BY_UNIT[unit][MIN_INDEX] < float(value) < RANGE_SPEC_BY_UNIT[unit][MAX_INDEX]:
+        range_by_reading_type = RANGE_SPEC_BY_UNIT[reading_type].get(unit, None)
+        if range_by_reading_type is None:
+            range_value =  RANGE_SPEC_BY_UNIT[reading_type].get('DEFAULT')
+        else:
+            range_value = RANGE_SPEC_BY_UNIT[reading_type].get(unit)
+            
+        if range_value[MIN_INDEX] < float(value) < range_value[MAX_INDEX]:
             return return_success(message='Successful')
 
     #return false if anything fails
