@@ -24,6 +24,7 @@ def get_readings_parameter_dictionary():
         USER_EVENT_KEY: None,
         READINGS_JSON_KEY: None,
         SOURCE_DEVELOPER_KEY: None,
-        CARE_RECEIVER_KEY: None
+        CARE_RECEIVER_KEY: None,
+        SOURCE_MANUFACTURER_KEY: None
     }
     return reading_parameters
