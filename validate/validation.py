@@ -28,7 +28,8 @@ def validate(value, reading_type, unit=None):
         if value == RANGE_SPEC_BY_UNIT[BOOLEAN_UNIT_SLUG][MIN_INDEX] or value == RANGE_SPEC_BY_UNIT[BOOLEAN_UNIT_SLUG][MAX_INDEX]:
             return return_success(message='Successful')
     else:
-        if RANGE_SPEC_BY_UNIT[unit][MIN_INDEX] < value < RANGE_SPEC_BY_UNIT[unit][MAX_INDEX]:
+        #todo: determine if its a float value based on constants
+        if RANGE_SPEC_BY_UNIT[unit][MIN_INDEX] < float(value) < RANGE_SPEC_BY_UNIT[unit][MAX_INDEX]:
             return return_success(message='Successful')
 
     #return false if anything fails
@@ -57,7 +58,7 @@ def validate_request(request, data=None):
             if ORIGINAL_VALUE_KEY not in reading or not reading[ORIGINAL_VALUE_KEY]:
                 return return_failure(message='Value is required.')
             reading_type_id = reading['reading_type_id'].lower()
-            value = float(reading['value'])
+            value = reading['value']
             validation_response = validate(value, reading_type_id, reading.get(ORIGINAL_UNIT_KEY, None))
             if validation_response['success'] is False:
                 return validation_response
@@ -68,7 +69,7 @@ def validate_request(request, data=None):
         if ORIGINAL_VALUE_KEY not in data:
             return return_failure(message='Value is missing')
         reading_type_id = data[READING_TYPE_ID_KEY].lower()
-        value = float(data[ORIGINAL_VALUE_KEY])
+        value = data[ORIGINAL_VALUE_KEY]
         validation_response = validate(value, reading_type_id, reading.get(ORIGINAL_UNIT_KEY, None))
     
     return return_success(message='Successful')
