@@ -25,17 +25,18 @@ def validate(value, reading_type, unit=None):
     #check if value within acceptable range of unit
     MIN_INDEX=0
     MAX_INDEX=1
+    
+    range_by_reading_type = RANGE_SPEC_BY_UNIT[reading_type].get(unit, None)
+    if range_by_reading_type is None:
+        range_value =  RANGE_SPEC_BY_UNIT[reading_type].get(DEFAULT_RANGES)
+    else:
+        range_value = RANGE_SPEC_BY_UNIT[reading_type].get(unit)
+    
     if unit == BOOLEAN_UNIT_SLUG:
-        if value in RANGE_SPEC_BY_UNIT[BOOLEAN_UNIT_SLUG]:
+        if value in range_value:
             return return_success(message='Successful')
     else:
-        #todo: determine if its a float value based on constants
-        range_by_reading_type = RANGE_SPEC_BY_UNIT[reading_type].get(unit, None)
-        if range_by_reading_type is None:
-            range_value =  RANGE_SPEC_BY_UNIT[reading_type].get(DEFAULT_RANGES)
-        else:
-            range_value = RANGE_SPEC_BY_UNIT[reading_type].get(unit)
-            
+        #todo: determine if its a float value based on constants            
         if range_value[MIN_INDEX] < float(value) < range_value[MAX_INDEX]:
             return return_success(message='Successful')
 
