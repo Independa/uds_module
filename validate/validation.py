@@ -71,5 +71,7 @@ def validate_request(request, data=None):
         reading_type_id = data[READING_TYPE_ID_KEY].lower()
         value = data[ORIGINAL_VALUE_KEY]
         validation_response = validate(value, reading_type_id, data.get(ORIGINAL_UNIT_KEY, None))
+        if validation_response['success'] is False:
+            return validation_response
     
     return return_success(message='Successful')
