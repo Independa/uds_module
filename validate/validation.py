@@ -2,6 +2,7 @@ __author__ = 'wenzou'
 
 from constants import *
 from helpers import *
+import json
 
 def return_failure(message='Failure'):
     return {'success': False, 'message': message}
