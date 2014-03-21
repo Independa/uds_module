@@ -127,6 +127,11 @@ RANGE_SPEC_BY_UNIT = {
     },
     FIRE_SLUG: {
         
+    },
+    BODY_WEIGHT_SLUG : {
+        WEIGHT_UNIT_KILOGRAMS_SLUG: (27, 180, 'kilograms'),
+        WEIGHT_UNIT_POUNDS_SLUG: (60, 399, 'pounds'),
+        WEIGHT_UNIT_STONES_SLUG: (4, 30, 'stones')
     }
 }
 
