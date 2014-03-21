@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='UDS Readings Module',
-    version='0.1.14',
+    version='0.1.15',
     author='Independa Inc,',
     author_email='wen@independa.com',
     packages=['validate'],
