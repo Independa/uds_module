@@ -221,7 +221,7 @@ EXTRA_FIELDS_KEY = 'extra_fields'
 SOURCE_DEVELOPER_KEY = 'source_developer'
 CARE_RECEIVER_KEY = 'care_receiver'
 SOURCE_MANUFACTURER_KEY = 'source_manufacturer'
-
+ASSOCIATED_READINGS_KEY = 'associated_readings'
 PHONE_SOURCE_KEY = 'phone'
 DEVICE_SOURCE_KEY = 'device'
 CONFIRM_KEY = 'confirm'

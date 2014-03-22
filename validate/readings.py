@@ -25,6 +25,7 @@ def get_readings_parameter_dictionary():
         READINGS_JSON_KEY: None,
         SOURCE_DEVELOPER_KEY: None,
         CARE_RECEIVER_KEY: None,
-        SOURCE_MANUFACTURER_KEY: None
+        SOURCE_MANUFACTURER_KEY: None,
+        ASSOCIATED_READINGS_KEY: None
     }
     return reading_parameters
