@@ -230,4 +230,4 @@ REMOVE_KEY = 'remove'
 
 
 #name of the task
-API_PROCESS_TASK = 'api_process_task'
+API_PROCESS_TASK = 'independa.api.reading.process'
