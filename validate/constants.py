@@ -70,12 +70,12 @@ RANGE_SPEC_BY_UNIT = {
         WEIGHT_UNIT_STONES_SLUG: (4, 30, 'stones')
     },
     BODY_TEMP_SLUG: {
-        TEMPERATURE_UNIT_CELSIUS_SLUG: (95, 105, 'farenheit'),
-        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (35, 40, 'celsius')
+        TEMPERATURE_UNIT_CELSIUS_SLUG: (35, 40, 'celsius'),
+        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (95, 105, 'farenheit')
     },
     ROOM_TEMP_SLUG: {
-        TEMPERATURE_UNIT_CELSIUS_SLUG: (-76, 176, 'farenheit'),
-        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (-60, 80, 'celsius')
+        TEMPERATURE_UNIT_CELSIUS_SLUG: (-60, 80, 'celsius'),
+        TEMPERATURE_UNIT_FAHRENHEIT_SLUG: (-76, 176, 'farenheit')
     },
     GLUCOSE_SLUG: {
         MG_PER_DL_UNIT_SLUG: (40, 999)
