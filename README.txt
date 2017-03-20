@@ -31,6 +31,4 @@ returns the dictionary of reading parameters.
 
 TO DEPLOY:
 (Merge to master)
-(Set up heroku git)
-git remote add heroku_angela_dev [git_url]
-git push heroku_uds_module master:master
+Deploy normally with heroku
