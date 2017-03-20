@@ -48,7 +48,7 @@ def validate(value, reading_type, unit=None):
             return return_success(message='Successful')
     else:
         #todo: determine if its a float value based on constants            
-        if range_value[MIN_INDEX] < float(value) < range_value[MAX_INDEX]:
+        if range_value[MIN_INDEX] <= float(value) <= range_value[MAX_INDEX]:
             return return_success(message='Successful')
 
     #return false if anything fails
