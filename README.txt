@@ -28,3 +28,9 @@ To use readings parameters dictionary
 from validate.readings import *
 call get_readings_parameter_dictionary
 returns the dictionary of reading parameters.
+
+TO DEPLOY:
+(Merge to master)
+(Set up heroku git)
+git remote add heroku_angela_dev [git_url]
+git push heroku_uds_module master:master
